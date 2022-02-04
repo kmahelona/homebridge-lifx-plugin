@@ -183,3 +183,8 @@ If you find something that does not fit yet open an issue, I will take care of i
 - LIFX Colour 1000          (by [andyvirus](https://github.com/andyvirus))
 - LIFX GU10                 (by [L0T8](https://github.com/L0T8))
 - LIFX Mini Day & Dusk      (by [L0T8](https://github.com/L0T8))
+ 
+## 🧰 Trouble Shooting
+   
+   ### Auto discover doesn't work
+   If your devices aren't automatically discovered, you may have to change your `Broadcast Address` (see Advanced Settings). To find your broadcast address, open the terminal in Homebridge, e.g. https://homebridge.local/platform-tools/terminal, and run the command `ifconfig`. Look for the line `inet xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx broadcast 255.255.255.255` and the value for `broadcast` should be used in your configuration. Note that the interface that's connected to your network, e.g. wifi or ethernet, will have the correct broadcast address.
